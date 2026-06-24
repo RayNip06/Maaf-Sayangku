@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maaf, Sayang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Lapisan partikel ambient: kelopak bunga & kunang-kunang lembut -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- ===================== SCENE 1 : AMPLOP ===================== -->
+  <section id="scene-envelope" class="scene scene--active">
+    <div class="envelope-wrap">
+      <p class="envelope-hint">ketuk amplopnya, sayang</p>
+
+      <button id="envelope" class="envelope" aria-label="Buka surat">
+        <span class="envelope__back"></span>
+        <span class="envelope__pocket"></span>
+        <span class="envelope__letter-peek"></span>
+        <span class="envelope__flap"></span>
+        <span class="envelope__seal">
+          <svg viewBox="0 0 100 100" class="seal__rose" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" class="seal__base"/>
+            <path class="seal__line" d="M50 22c-9 0-15 7-15 14 0 9 8 13 15 19 7-6 15-10 15-19 0-7-6-14-15-14z"/>
+          </svg>
+        </span>
+      </button>
+
+      <p class="envelope-caption">untuk seseorang yang paling berarti, Nafisa Halwa Tuyono</p>
+    </div>
+  </section>
+
+  <!-- ===================== SCENE 2 : SURAT ===================== -->
+  <section id="scene-letter" class="scene">
+    <div class="letter-stage">
+
+      <article class="letter" id="letter">
+        <header class="letter__header">
+          <span class="letter__eyebrow">sepucuk maaf, ditulis dengan niat yang tulus dari Muhammad Munif Raihan</span>
+          <h1 class="letter__title">Maaf, Sayangku.</h1>
+          <div class="letter__divider" aria-hidden="true">
+            <svg viewBox="0 0 200 20"><path d="M0 10 Q 50 -5, 100 10 T 200 10" /></svg>
+          </div>
+        </header>
+
+        <div class="letter__body" id="letter-body">
+  <p data-line>Sayang, aku tahu mungkin kamu masih kecewa sama aku, bukan mungkin lagi tapi memang, dan aku ngerti kenapa.</p>
+
+  <p data-line>Aku minta maaf ya tentang hal sebelumnya yang udah aku lakuin bikin kamu sedih, kepikiran, bahkan jadi ngerasa nggak tenang.</p>
+
+  <p data-line>Aku nggak pernah ada niat buat nyakitin kamu. Tapi tanpa sadar aku udah nyakitin kamu... maafin aku ya, kadang yang paling ngaruh itu bukan niatnya, tapi gimana cara aku menyikapinya</p>
+
+  <p data-line>Aku ngerti kalau kepercayaan itu nggak bisa balik cuma karena kata "maaf". Makanya aku pengen nunjukkin lewat sikap kalau aku serius buat jadi lebih baik.</p>
+
+  <p data-line>Aku bukan cuma nggak mau kehilangan orang yang paling berarti buat aku. Tapi aku juga ngga mau kehilangan arti dari hidup aku, yang menurut aku itu yaa kamu Nafisa Halwa Tuyono.</p>
+
+  <p data-line>Kalau kamu masih marah, masih kecewa, nggak apa-apa. Aku bakal tetap di sini dan berusaha ngebalikin senyum kamu pelan-pelan walau akunya lambat. Maaf ya cintaku</p>
+
+  <p data-line class="letter__signoff">
+    Aku sayang kamu.<br>
+    <span>Dan aku harap kamu masih mau kasih aku kesempatan.</span>
+  </p>
+</div>
+
+        <button id="btn-continue" class="btn-quiet">lanjut&nbsp;&rarr;</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== SCENE 3 : PERTANYAAN ===================== -->
+  <section id="scene-question" class="scene">
+    <div class="question-stage">
+      <p class="question__eyebrow">satu pertanyaan kecil</p>
+      <h2 class="question__title" id="question-title">Maukah kamu untuk maafin aku?</h2>
+      <p class="question__sub" id="question-sub">aku bakal menunggu jawaban kamu sebaik mungkin.</p>
+
+      <div class="question__actions">
+        <button id="btn-yes" class="btn-primary">Ya, aku maafkan</button>
+        <button id="btn-no" class="btn-ghost">Belum siap</button>
+      </div>
+
+      <p class="question__note" id="no-counter" hidden></p>
+    </div>
+  </section>
+
+  <!-- ===================== SCENE 4 : PENUTUP ===================== -->
+  <section id="scene-final" class="scene">
+    <div class="final-stage">
+      <div class="final-glow" aria-hidden="true"></div>
+      <span class="final-icon">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 56s-22-13.6-22-30.3C10 16.6 16.8 10 25 10c3.7 0 7 1.7 9 4.6 2-2.9 5.3-4.6 9-4.6 8.2 0 15 6.6 15 15.7C58 42.4 32 56 32 56z"/>
+        </svg>
+      </span>
+      <h2 class="final-title">Terima kasih, Sayang.</h2>
+      <p class="final-text">Aku bakal ngejaga kepercayaanmu ini lebih baik dari kemarin.<br>I love you more than i should, more than i planned, and definitely more than i can explain, but im happy with it</p>
+      <p class="final-stamp">— Muhammad Munif Raihan, untukmu Nafisa Halwa Tuyono</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
